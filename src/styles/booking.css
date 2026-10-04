@@ -1,0 +1,113 @@
+.booking-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.booking-content > p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.booking-header p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.booking-button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.booking-form {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.booking-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.booking-form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.booking-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.booking-icon {
+  font-size: 50px;
+}
+
+.booking-info {
+  flex: 1;
+}
+
+.booking-info h2 {
+  margin-bottom: 15px;
+}
+
+.booking-info p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.booking-status {
+  color: #2e7d32 !important;
+  font-weight: bold;
+}
+
+.no-booking-card {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.no-booking-card p {
+  margin: 15px 0 20px;
+  color: #666;
+}

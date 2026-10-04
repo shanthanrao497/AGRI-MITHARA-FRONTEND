@@ -1,0 +1,96 @@
+.crop-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.crop-content > p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.crop-form {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crop-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.crop-form button,
+.crop-card button,
+.crop-details-card button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.crop-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.crop-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.crop-card h2 {
+  margin-bottom: 12px;
+}
+
+.crop-card p {
+  color: #666;
+  margin: 8px 0;
+}
+
+.crop-card button {
+  margin-top: 15px;
+}
+
+.crop-details-card,
+.selected-crop-card {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.crop-large-icon {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.crop-details-card p,
+.selected-crop-card p {
+  margin: 15px 0;
+}
+
+.selected-status {
+  color: #2e7d32;
+  font-weight: bold;
+}

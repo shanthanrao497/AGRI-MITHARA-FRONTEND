@@ -1,0 +1,95 @@
+.profile-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-header p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.profile-button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background-color: #256628;
+}
+
+.profile-card {
+  background-color: white;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.profile-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-item span {
+  color: #666;
+}
+
+.profile-form {
+  background-color: white;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.profile-form label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.profile-form input,
+.profile-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-family: Arial, sans-serif;
+}
+
+.profile-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+}

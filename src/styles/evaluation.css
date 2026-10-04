@@ -1,0 +1,85 @@
+.evaluation-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.evaluation-content > p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.evaluation-form {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.evaluation-form input,
+.evaluation-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.evaluation-form button,
+.evaluation-button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.report-card {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.report-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.report-card h2 {
+  margin-bottom: 20px;
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.evaluation-status {
+  color: #2e7d32;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.no-report-card {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.no-report-card p {
+  color: #666;
+  margin: 15px 0 20px;
+}

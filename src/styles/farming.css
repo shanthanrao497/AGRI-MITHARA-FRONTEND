@@ -1,0 +1,164 @@
+.farming-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.farming-content > p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.farming-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.farming-header p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.farming-button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.activity-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.activity-icon {
+  font-size: 50px;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-info h2 {
+  margin-bottom: 15px;
+}
+
+.activity-info p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.activity-status {
+  color: #2e7d32 !important;
+  font-weight: bold;
+}
+
+.no-activity-card {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.no-activity-card p {
+  margin: 15px 0 20px;
+  color: #666;
+}
+
+.progress-link {
+  margin-top: 30px;
+}
+
+.farming-form {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.farming-form input,
+.farming-form select,
+.farming-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.farming-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.farming-form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.progress-card {
+  background: white;
+  max-width: 700px;
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.progress-item:last-child {
+  border-bottom: none;
+}
+
+.progress-icon {
+  font-size: 35px;
+}
+
+.progress-info {
+  flex: 1;
+}
+
+.progress-info h3 {
+  margin-bottom: 8px;
+}
+
+.status-completed {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.status-progress {
+  color: #f57c00;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #777;
+  font-weight: bold;
+}

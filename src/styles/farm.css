@@ -1,0 +1,95 @@
+.farm-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.farm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.farm-header h1 {
+  margin-bottom: 8px;
+}
+
+.farm-header p {
+  color: #666;
+}
+
+.add-farm-button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.farm-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.farm-card-icon {
+  font-size: 50px;
+}
+
+.farm-info {
+  flex: 1;
+}
+
+.farm-info h2 {
+  margin-bottom: 12px;
+}
+
+.farm-info p {
+  margin: 6px 0;
+  color: #666;
+}
+
+.farm-card button,
+.farm-form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+}
+
+.farm-form {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.farm-form input,
+.farm-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.farm-details-card {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+}
+
+.farm-details-card p {
+  margin: 15px 0;
+}

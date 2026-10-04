@@ -1,0 +1,244 @@
+.navbar {
+  height: 65px;
+  background-color: #2e7d32;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sidebar {
+  width: 230px;
+  min-height: calc(100vh - 65px);
+  background-color: white;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+.sidebar a {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.bottom-navigation {
+  display: none;
+}
+.home-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.hero-section {
+  min-height: 260px;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+
+  background-image: url("/images/farm-banner.png");
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 17px;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.hero-section button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background: white;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.quick-section {
+  margin-top: 30px;
+}
+
+.quick-section h2 {
+  margin-bottom: 20px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.quick-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quick-card:first-letter {
+  font-size: 30px;
+}
+
+.quick-card h3 {
+  margin: 12px 0 8px;
+}
+
+.quick-card p {
+  color: #666;
+}
+.quick-card {
+  display: block;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.quick-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.quick-card h3 {
+  margin: 12px 0 8px;
+}
+
+.quick-card p {
+  color: #666;
+}
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-user {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .home-content {
+    padding: 20px;
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .bottom-navigation a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 20px;
+  }
+
+  .bottom-navigation small {
+    font-size: 11px;
+    color: #555;
+  }
+
+  .home-content {
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    min-height: 300px;
+    padding: 25px;
+  }
+
+  .hero-section h1 {
+    font-size: 27px;
+  }
+
+  .hero-section p {
+    font-size: 15px;
+  }
+
+  .quick-card {
+    padding: 20px;
+  }
+}
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-body {
+  display: flex;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+}
