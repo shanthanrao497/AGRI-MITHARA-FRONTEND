@@ -21,13 +21,22 @@ function Resources() {
 
       console.log("Resources from database:", data);
 
-      setResources(data || []);
+      // Remove duplicate resources
+      const uniqueResources = Array.from(
+        new Map(
+          (data || []).map((resource) => [
+            `${resource.name?.trim().toLowerCase()}-${resource.type?.trim().toLowerCase()}`,
+            resource
+          ])
+        ).values()
+      );
+
+      console.log("Unique resources:", uniqueResources);
+
+      setResources(uniqueResources);
 
     } catch (error) {
-      console.error(
-        "Failed to load resources:",
-        error
-      );
+      console.error("Failed to load resources:", error);
 
       if (error.response) {
         console.error(
@@ -70,6 +79,14 @@ function Resources() {
       resourceType?.includes("protection")
     ) {
       return "🧴";
+    }
+
+    if (resourceType?.includes("irrigation")) {
+      return "💧";
+    }
+
+    if (resourceType?.includes("harvesting")) {
+      return "🌾";
     }
 
     return "📦";

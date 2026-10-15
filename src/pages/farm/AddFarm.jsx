@@ -8,6 +8,8 @@ function AddFarm() {
 
   const [farm, setFarm] = useState({
     name: "",
+    surveyNumber: "",
+    pattaPassbookNumber: "",
     location: "",
     area: "",
     soilType: ""
@@ -45,6 +47,8 @@ function AddFarm() {
 
       const farmData = {
         farmName: farm.name,
+        surveyNumber: farm.surveyNumber,
+        pattaPassbookNumber: farm.pattaPassbookNumber,
         location: farm.location,
         area: Number(farm.area),
         soilType: farm.soilType,
@@ -87,18 +91,13 @@ function AddFarm() {
 
   return (
     <Layout>
-
       <div className="farm-content">
 
         <h1>Add Farm 🚜</h1>
 
-        <form
-          className="farm-form"
-          onSubmit={handleSubmit}
-        >
+        <form className="farm-form" onSubmit={handleSubmit}>
 
           <label>Farm Name</label>
-
           <input
             type="text"
             name="name"
@@ -108,8 +107,27 @@ function AddFarm() {
             required
           />
 
-          <label>Location</label>
+          <label>Survey Number</label>
+          <input
+            type="text"
+            name="surveyNumber"
+            placeholder="Enter survey number"
+            value={farm.surveyNumber}
+            onChange={handleChange}
+            required
+          />
 
+          <label>Patta Passbook Number</label>
+          <input
+            type="text"
+            name="pattaPassbookNumber"
+            placeholder="Enter patta passbook number"
+            value={farm.pattaPassbookNumber}
+            onChange={handleChange}
+            required
+          />
+
+          <label>Location</label>
           <input
             type="text"
             name="location"
@@ -120,7 +138,6 @@ function AddFarm() {
           />
 
           <label>Farm Area (Acres)</label>
-
           <input
             type="number"
             name="area"
@@ -131,41 +148,25 @@ function AddFarm() {
           />
 
           <label>Soil Type</label>
-
           <select
             name="soilType"
             value={farm.soilType}
             onChange={handleChange}
             required
           >
-            <option value="">
-              Select soil type
-            </option>
-
-            <option value="Black Soil">
-              Black Soil
-            </option>
-
-            <option value="Red Soil">
-              Red Soil
-            </option>
-
-            <option value="Alluvial Soil">
-              Alluvial Soil
-            </option>
+            <option value="">Select soil type</option>
+            <option value="Black Soil">Black Soil</option>
+            <option value="Red Soil">Red Soil</option>
+            <option value="Alluvial Soil">Alluvial Soil</option>
           </select>
 
-          <button
-            type="submit"
-            disabled={loading}
-          >
+          <button type="submit" disabled={loading}>
             {loading ? "Saving..." : "Save Farm"}
           </button>
 
         </form>
 
       </div>
-
     </Layout>
   );
 }

@@ -1,95 +1,794 @@
-.profile-content {
-  flex: 1;
-  padding: 30px;
+/* =========================================
+   AGRI MITHRA - FARMER PROFILE
+   ========================================= */
+
+.profile-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 25px 50px;
+  box-sizing: border-box;
 }
 
-.profile-header {
+/* =========================================
+   PAGE TITLE
+   ========================================= */
+
+.profile-title {
+  margin-bottom: 25px;
+}
+
+.profile-title h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-title p {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   PROFILE CARD
+   ========================================= */
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   ACCORDION HEADER
+   ========================================= */
+
+.accordion-header {
+  min-height: 75px;
+  padding: 18px 22px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  cursor: pointer;
+
+  background: #ffffff;
+
+  transition: all 0.2s ease;
 }
 
-.profile-header p {
-  color: #666;
-  margin-top: 8px;
+.accordion-header:hover {
+  background: #f3faf3;
 }
 
-.profile-button {
-  background-color: #2e7d32;
-  color: white;
+.accordion-header h2 {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.accordion-header p {
+  margin: 6px 0 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ARROW
+   ========================================= */
+
+.accordion-arrow {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #e8f5e9;
+  color: #2e7d32;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.accordion-header:hover .accordion-arrow {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   ACCORDION CONTENT
+   ========================================= */
+
+.accordion-content {
+  padding: 0 22px 25px;
+
+  border-top: 1px solid #edf0ed;
+
+  animation: openSection 0.25s ease;
+}
+
+@keyframes openSection {
+
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   SECTION ACTION
+   ========================================= */
+
+.section-action {
+  display: flex;
+  justify-content: flex-end;
+
+  margin: 20px 0;
+}
+
+
+/* =========================================
+   ADD BUTTON
+   ========================================= */
+
+.add-land-button {
   border: none;
-  padding: 12px 20px;
+  outline: none;
+
+  background: #2e7d32;
+  color: #ffffff;
+
+  padding: 11px 18px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.add-land-button:hover {
+  background: #256b29;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.25);
+}
+
+.add-land-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   FORM GRID
+   ========================================= */
+
+.profile-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   FORM FIELD
+   ========================================= */
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.profile-field label {
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-field input,
+.profile-field select {
+
+  width: 100%;
+  height: 45px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
   border-radius: 8px;
-  font-weight: bold;
+
+  background: #ffffff;
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-field input::placeholder {
+  color: #9ca3af;
+}
+
+.profile-field input:focus,
+.profile-field select:focus {
+
+  border-color: #2e7d32;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(46, 125, 50, 0.12);
+}
+
+.profile-field select {
   cursor: pointer;
 }
 
-.profile-button:hover {
-  background-color: #256628;
-}
 
-.profile-card {
-  background-color: white;
-  max-width: 650px;
-  padding: 30px;
+/* =========================================
+   OWN LAND MESSAGE
+   ========================================= */
+
+.land-message {
+
+  text-align: center;
+
+  padding: 45px 20px;
+
+  border: 1px dashed #cfd8cf;
+
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  background: #f8fbf8;
 }
 
-.profile-icon {
-  font-size: 65px;
-  margin-bottom: 15px;
+.no-land-icon {
+
+  font-size: 45px;
+
+  margin-bottom: 10px;
 }
 
-.profile-card h2 {
-  margin-bottom: 20px;
-  color: #2e7d32;
+.land-message h3 {
+
+  margin: 5px 0 8px;
+
+  color: #374151;
+
+  font-size: 19px;
 }
 
-.profile-item {
+.land-message p {
+
+  margin: 0 0 20px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   LAND LIST
+   ========================================= */
+
+.land-list {
+
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid #eee;
-}
 
-.profile-item span {
-  color: #666;
-}
-
-.profile-form {
-  background-color: white;
-  max-width: 650px;
-  padding: 30px;
-  border-radius: 12px;
-  display: flex;
   flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  gap: 18px;
 }
 
-.profile-form label {
-  font-weight: bold;
-  margin-top: 5px;
+
+/* =========================================
+   LAND ITEM
+   ========================================= */
+
+.land-item {
+
+  padding: 20px;
+
+  border: 1px solid #dfe7df;
+
+  border-radius: 12px;
+
+  background: #fafdf9;
+
+  transition: all 0.2s ease;
 }
 
-.profile-form input,
-.profile-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  font-family: Arial, sans-serif;
+.land-item:hover {
+
+  border-color: #a5c7a7;
+
+  box-shadow:
+    0 4px 12px
+    rgba(46, 125, 50, 0.08);
 }
 
-.profile-form textarea {
-  min-height: 100px;
-  resize: vertical;
+
+/* =========================================
+   LAND ITEM HEADER
+   ========================================= */
+
+.land-item-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #e5ebe5;
 }
 
-.profile-form input:focus,
-.profile-form textarea:focus {
-  outline: none;
-  border-color: #2e7d32;
+.land-item-header h3 {
+
+  margin: 0;
+
+  color: #2e7d32;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   LAND STATUS
+   ========================================= */
+
+.land-status {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 5px 12px;
+
+  border-radius: 20px;
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   LAND DETAILS GRID
+   ========================================= */
+
+.land-details-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.land-details-grid > div {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.land-details-grid span {
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.land-details-grid strong {
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+
+/* =========================================
+   BOTTOM BUTTONS
+   ========================================= */
+
+.profile-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.edit-profile-button,
+.back-button {
+
+  min-width: 150px;
+
+  padding: 12px 20px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   EDIT PROFILE
+   ========================================= */
+
+.edit-profile-button {
+
+  border: none;
+
+  background: #2e7d32;
+
+  color: #ffffff;
+}
+
+.edit-profile-button:hover {
+
+  background: #256b29;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px
+    rgba(46, 125, 50, 0.25);
+}
+
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.back-button {
+
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+
+  color: #374151;
+}
+
+.back-button:hover {
+
+  background: #f3f4f6;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .profile-page {
+
+    padding:
+      25px
+      18px
+      40px;
+  }
+
+  .land-details-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .profile-page {
+
+    padding:
+      20px
+      12px
+      35px;
+  }
+
+  .profile-title h1 {
+
+    font-size: 26px;
+  }
+
+  .profile-title p {
+
+    font-size: 13px;
+  }
+
+  .accordion-header {
+
+    min-height: 65px;
+
+    padding:
+      15px
+      16px;
+  }
+
+  .accordion-header h2 {
+
+    font-size: 17px;
+  }
+
+  .accordion-header p {
+
+    font-size: 12px;
+  }
+
+  .accordion-arrow {
+
+    width: 31px;
+    height: 31px;
+
+    font-size: 11px;
+  }
+
+  .accordion-content {
+
+    padding:
+      0
+      16px
+      20px;
+  }
+
+  .profile-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .land-details-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .section-action {
+
+    justify-content: stretch;
+  }
+
+  .section-action .add-land-button {
+
+    width: 100%;
+  }
+
+  .land-item {
+
+    padding: 16px;
+  }
+
+  .land-item-header {
+
+    align-items: flex-start;
+  }
+
+  .land-item-header h3 {
+
+    font-size: 16px;
+  }
+
+  .profile-buttons {
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .edit-profile-button,
+  .back-button {
+
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .profile-page {
+
+    padding:
+      16px
+      10px
+      30px;
+  }
+
+  .profile-title h1 {
+
+    font-size: 22px;
+  }
+
+  .profile-card {
+
+    border-radius: 12px;
+  }
+
+  .profile-field input,
+  .profile-field select {
+
+    height: 43px;
+
+    font-size: 13px;
+  }
+
+  .land-message {
+
+    padding:
+      35px
+      15px;
+  }
+
+}
+/* =========================================
+   EMI / LOAN SECTION
+   ========================================= */
+
+.finance-subsection {
+  padding: 20px;
+  margin-top: 20px;
+
+  background: #f8fbf8;
+
+  border: 1px solid #dfe7df;
+  border-radius: 12px;
+}
+
+.finance-subsection:first-child {
+  margin-top: 20px;
+}
+
+.finance-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #dfe7df;
+}
+
+.finance-subtitle h3 {
+  margin: 0;
+
+  color: #2e7d32;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.finance-subtitle span {
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.loan-section {
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   FINANCE MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .finance-subsection {
+    padding: 16px;
+  }
+
+  .finance-subtitle {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .finance-subtitle h3 {
+    font-size: 16px;
+  }
+
 }

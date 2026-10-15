@@ -3,9 +3,14 @@ import api from "./api";
 export const createFarm = async (farmData) => {
   try {
     const token = localStorage.getItem("token");
+    const userId = localStorage.getItem("userId");
+
+    if (!userId) {
+      throw new Error("User ID not found. Please login again.");
+    }
 
     const response = await api.post(
-      "/farms",
+      `/farms?userId=${userId}`,
       farmData,
       {
         headers: {
@@ -27,7 +32,7 @@ export const getFarmsByUser = async (userId) => {
     const token = localStorage.getItem("token");
 
     const response = await api.get(
-      "/farms/user/" + userId,
+      `/farms/user/${userId}`,
       {
         headers: {
           Authorization: "Bearer " + token
